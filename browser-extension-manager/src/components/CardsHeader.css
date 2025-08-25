@@ -1,0 +1,31 @@
+.cardsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.buttonWrapper button {
+  height: 2rem;
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 0.3px solid #f1f1f1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.buttonWrapper button.Active {
+  background-color: #c8211b;
+  color: white;
+}
