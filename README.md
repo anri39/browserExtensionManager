@@ -13,7 +13,8 @@ It pulls extension information from a local `data.json` file and allows filterin
 
 ## 📸 Demo
 
-(Add a screenshot or GIF of your app here!)
+![preview](https://github.com/user-attachments/assets/e59739d1-8a11-49e1-94dc-e222d57681d1)
+
 
 ## 🛠️ Tech Stack
 
