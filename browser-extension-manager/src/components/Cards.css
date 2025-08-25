@@ -1,14 +1,17 @@
 .Card {
-  max-width: 30.75rem;
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: var(--neutral-0);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  min-height: 220px;
+  min-height: 200px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark .Card {
+  background-color: var(--neutral-800);
 }
 
 .toppart {
@@ -21,21 +24,29 @@
   width: 3rem;
   height: 3rem;
   border-radius: 0.5rem;
-  background: #f5f6f7;
+  background: var(--neutral-200);
 }
 
 .desc p:first-child {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #2d2d2d;
+  color: var(--neutral-900);
   margin: 0;
 }
 
+body.dark .desc p:first-child {
+  color: var(--neutral-0);
+}
+
 .desc p:last-child {
-  color: #6b6f76;
+  color: var(--neutral-600);
   font-size: 0.95rem;
-  margin: 0.25rem 0 0 0;
+  margin-top: 0.25rem;
   line-height: 1.4;
+}
+
+body.dark .desc p:last-child {
+  color: var(--neutral-300);
 }
 
 .bottompart {
@@ -45,25 +56,36 @@
 }
 
 .removeBtn {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  border: 1px solid #e0e0e0;
-  background-color: #fff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-300);
+  color: var(--neutral-900);
+  font-size: 0.85rem;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
+  transition: background 0.2s, color 0.2s, border 0.2s;
 }
 
 .removeBtn:hover {
-  background-color: #f7f9fc;
-  border-color: #d0d0d0;
+  background: var(--neutral-200);
+  border-color: var(--neutral-600);
+}
+
+body.dark .removeBtn {
+  background: var(--neutral-700);
+  border: 1px solid var(--neutral-600);
+  color: var(--neutral-0);
+}
+
+body.dark .removeBtn:hover {
+  background: var(--neutral-600);
 }
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 26px;
+  width: 42px;
+  height: 22px;
 }
 
 .switch input {
@@ -79,7 +101,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #e0e0e0;
+  background-color: var(--neutral-300);
   transition: 0.3s;
   border-radius: 34px;
 }
@@ -87,20 +109,20 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 20px;
+  height: 16px;
+  width: 16px;
   left: 3px;
   bottom: 3px;
-  background-color: white;
+  background-color: var(--neutral-0);
   transition: 0.3s;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .switch input:checked + .slider {
-  background-color: #c8211b;
+  background-color: var(--red-500);
 }
 
 .switch input:checked + .slider:before {
-  transform: translateX(24px);
+  transform: translateX(20px);
 }

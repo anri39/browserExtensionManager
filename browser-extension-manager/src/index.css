@@ -7,9 +7,19 @@
   --neutral-200: hsl(217, 61%, 90%);
   --neutral-100: hsl(0, 0%, 93%);
   --neutral-0: hsl(200, 60%, 99%);
+
+  --red-400: hsl(3, 86%, 64%);
   --red-500: hsl(3, 71%, 56%);
+  --red-700: hsl(3, 77%, 44%);
+
   --light-gradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
   --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+  --font-body: "Noto Sans", sans-serif;
+  --font-size-body: 16px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 }
 
 * {
@@ -23,12 +33,20 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
   background: var(--light-gradient);
   color: var(--neutral-900);
+}
+
+body.dark {
+  background: var(--dark-gradient);
+  color: var(--neutral-0);
 }
 
 .container {
@@ -36,4 +54,6 @@ body {
   max-width: 1540px;
   margin: 0 auto;
   padding: 0 1rem;
+  color: inherit;
+  background: transparent;
 }

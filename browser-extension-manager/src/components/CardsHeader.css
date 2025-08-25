@@ -11,21 +11,37 @@
 }
 
 .buttonWrapper button {
-  height: 2rem;
-  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
   border: none;
-  padding: 20px;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
-  background-color: white;
-  border: 0.3px solid #f1f1f1;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  background: var(--neutral-0);
+  color: var(--neutral-900);
   cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
 
 .buttonWrapper button.Active {
-  background-color: #c8211b;
-  color: white;
+  background: var(--red-500);
+  color: var(--neutral-0);
+}
+
+body.dark .buttonWrapper button {
+  background: var(--neutral-700);
+  color: var(--neutral-0);
+}
+
+body.dark .buttonWrapper button.Active {
+  background: var(--red-500);
+  color: var(--neutral-0);
+}
+
+@media (max-width: 600px) {
+  .cardsHeader {
+    flex-direction: column;
+    gap: 20px;
+  }
 }

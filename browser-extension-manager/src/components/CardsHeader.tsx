@@ -1,33 +1,41 @@
 import "./CardsHeader.css";
-import { useState } from "react";
 
-export default function CardsHeader() {
-  const [selected, setSelected] = useState<string>("All");
+type CardHeaderProps = {
+  selectedFilter: "all" | "active" | "inactive";
+  setSelectedFilter: (filter: "all" | "active" | "inactive") => void;
+};
+
+export default function CardsHeader({
+  setSelectedFilter,
+  selectedFilter,
+}: CardHeaderProps) {
   return (
     <div className="cardsHeader">
       <h1>Extensions List</h1>
       <div className="buttonWrapper">
         <button
           onClick={() => {
-            setSelected("All");
+            setSelectedFilter("all");
           }}
-          className={selected === "All" ? "Active" : ""}
+          className={selectedFilter === "all" ? "Active" : ""}
         >
           All
         </button>
+
         <button
           onClick={() => {
-            setSelected("Active");
+            setSelectedFilter("active");
           }}
-          className={selected == "Active" ? "Active" : ""}
+          className={selectedFilter === "active" ? "Active" : ""}
         >
           Active
         </button>
+
         <button
           onClick={() => {
-            setSelected("Inactive");
+            setSelectedFilter("inactive");
           }}
-          className={selected === "Inactive" ? "Active" : ""}
+          className={selectedFilter === "inactive" ? "Active" : ""}
         >
           Inactive
         </button>
